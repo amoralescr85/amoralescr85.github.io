@@ -1,5 +1,20 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <script>
+  function populateScriptSrc () {
+  var referringUrl = window.location.href;
+  var userAgent = window.navigator.userAgent;
+  var myName = 'Andres';
+  var scriptUrl = '//c.fqtag.com/tag/implement-r.js?org=BB6DvPmytpFndg8atDcN&p='+referringUrl+'&a='+userAgent+'&cmp='+myName+'&fmt=banner&rt=display&sl=1&fq=1';
+  console.log(scriptUrl);
+  var scriptElement = document.getElementById('script-id');
+  scriptElement.src = scriptUrl;
+  }
+
+  populateScriptSrc();
+  </script>
+</head>
 <body>
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
