@@ -3,16 +3,18 @@
 <head>
   <script>
   function populateScriptSrc () {
-  var referringUrl = window.location.href;
-  var userAgent = window.navigator.userAgent;
-  var myName = 'Andres';
-  var scriptUrl = '//c.fqtag.com/tag/implement-r.js?org=BB6DvPmytpFndg8atDcN&p='+referringUrl+'&a='+userAgent+'&cmp='+myName+'&fmt=banner&rt=display&sl=1&fq=1';
-  console.log(scriptUrl);
-  var scriptElement = document.getElementById('script-id');
-  scriptElement.src = scriptUrl;
-  }
+var scriptElement = document.createElement('script');
+var referringUrl = window.location.href;
+var userAgent = window.navigator.userAgent;
+var myName = 'Andres';
+var scriptUrl = '//c.fqtag.com/tag/implement-r.js?org=BB6DvPmytpFndg8atDcN&p='+referringUrl+'&a='+userAgent+'&cmp='+myName+'&fmt=banner&rt=display&sl=1&fq=1';
+console.log(scriptUrl);
+  scriptElement.setAttribute('id', 'script-id');
+  scriptElement.setAttribute('src', scriptUrl);
+  document.head.appendChild(scriptElement);
+}
 
-  populateScriptSrc();
+populateScriptSrc();
   </script>
 </head>
 <body>
